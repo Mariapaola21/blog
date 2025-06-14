@@ -9,7 +9,7 @@ Route::get('/', function (){
     return "Bienvenido a mi primera vista";
 });
 
-//Define tu tipo de peticion get o post
+//Define tu tipo de peticion get o posts
 Route::get('/posts',function(){
 return"Aqui se mostraran todos los posts";
 });
