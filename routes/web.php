@@ -2,33 +2,26 @@
 
 
 use Illuminate\Support\Facades\Route;
+//Llama tu ruta
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 
+//no se le expecifica el metodo porque se le llamo __invoke y laravel lo toma
+//sin[]
+Route::get('/',HomeController::class);
 
-Route::get('/', function (){
-    return "Bienvenido a mi primera vista";
-});
+Route::get('/posts',[PostController::class, 'index']);
 
-//Define tu tipo de peticion get o posts
-Route::get('/posts',function(){
-return"Aqui se mostraran todos los posts";
-});
-
-//El Orden es importante prioriza las rutas sin parametros 
-Route::get('/posts/create', function(){
-    return"Aqui se mostrara un formulario para crear un posts";
-});
+Route::get('/posts/create', [PostController::class, 'create']);
 
 //Pasar parametro a las rutas
-Route::get('/posts/{post}', function($post){
-return"Aqui se mostrara el post: {$post}";
-} );
+Route::get('/posts/{post}', [PostController::class, 'show']);
 
 
 // multiples parametros en las rutas 
-Route::get('/posts/{post}/{category}', function($post,$category){
-return "Aqui se mostrara el post {$post} de la categoria {$category}";
-});
+// Route::get('/posts/{post}/{category}', function($post,$category){
+// return "Aqui se mostrara el post {$post} de la categoria {$category}";
+// });
 
 
 //Multiples parametros en las rutas pero con la condicion de opcional
