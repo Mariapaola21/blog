@@ -8,10 +8,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    //para crear un controlador se utilizo php artisan:makecontroller nombreController
-    //se llama invoke porque el controlador tiene un unico metodo
-    //solo se debe usar cuando hay un solo metodo
+    
     public function __invoke (){
-          return "Bienvenido a mi pagina principal desde los controladores";
+        //llama a view que es un helper son funciones internas para el uso de larael
+          return view('home');
     }
 }

@@ -6,15 +6,19 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    //crea los metodos 
+    //llama tus posts guardados en una carpeta con un . y el helper view
     public function index (){
-    return"Aqui se mostraran todos los posts";
+    return view('posts.index');
     }
     public function create (){
-     return"Aqui se mostrara un formulario para crear un posts";
+      
+     return view('posts.create');
     }
-    //debes recibir la funcion desde el metodo
+    
    public function show($post){
-     return"Aqui se mostrara el post: {$post}";
+    // pasa variable desde el controlador a la vista
+     return view('posts.show', [
+        'post'=> $post
+     ]);
    }
 }

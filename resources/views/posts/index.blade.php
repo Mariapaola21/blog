@@ -1,17 +1,12 @@
-{{-- lleva extension php y html --}}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel 11</title>
+    <title>Laravel 11 | pos</title>
 </head>
 <body>
-   
-    <h1>Hola esta es mi primera vista</h1>
-    <p>las vistas se utilian para poner codigos html y php </p>
-  {{-- redirige la ruta en tu  controller --}}
+    <h1>Aqui se mostraran todos los posts</h1>
 </body>
 </html>
