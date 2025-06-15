@@ -1,20 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel 11 | pos</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+{{-- es como importarlo --}}
+ @extends('layouts.app')
 
-</head>
-<body>
-    <h1>Aqui se mostraran todos los posts</h1>
-    {{-- para usar diferente tipos de alerta utilizA type 
-    ve al componente alerttype--}}
-    <x-alerttype type='danger' class="mb-4">
-        {{-- el class mb-4 lo esta almacenando un atributo por ende debes ponersela en el alerttype --}}
-    </x-alerttype>
-    <p>hola mundo</p>
-</body>
-</html>
+ @section('title')
+     LARAVEL CON PLANTILLAS
+ @endsection
+
+ {{-- si es de una sola linea el texto como el titulo anterior tambien se puede llamar --}}
+{{-- @section('title','LARAVEL CON PLANTILLAS 1') --}}
+
+<p>HOLAAAAAAAAAAAA</p>
+
+
+{{-- se utiliza push para llamar a  stack --}}
+@push('css')
+    <style>
+        body{
+            color: red;
+        }
+    </style>   
+@endpush
+{{-- se utiliza push para llamar a  stack --}}
+@push('css')
+    <style>
+        body{
+            background-color: burlywood;
+        }
+    </style>   
+@endpush
+
+
+
+ @section('content')
+
+  <div class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+  <span class="font-medium">PLANTILLAS</span> mi primera plantilla
+
+  
