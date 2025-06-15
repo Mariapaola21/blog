@@ -7,11 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel 11</title>
+    {{-- uso de tailwind --}}
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
    
-    <h1>Hola esta es mi primera vista</h1>
-    <p>las vistas se utilian para poner codigos html y php </p>
-  {{-- redirige la ruta en tu  controller --}}
+   <div >
+     <h1>Bienvenido a mi home</h1>
+     {{-- para llamar ami componente --}}
+      <x-alert>
+         <x-slot name="tittle">
+            Pase un titulo con slot name
+        </x-slot>
+        contenido de la alerta en variable
+     </x-alert>
+
+   </div>
+   
 </body>
 </html>
