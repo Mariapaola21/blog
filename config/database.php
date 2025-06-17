@@ -15,7 +15,10 @@ return [
     |
     */
 
+
+    #Aqui esta conectandotei con mysql
     'default' => env('DB_CONNECTION', 'mysql'),
+
 
     /*
     |--------------------------------------------------------------------------
